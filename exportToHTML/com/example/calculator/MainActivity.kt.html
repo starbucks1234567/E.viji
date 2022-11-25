@@ -1,0 +1,408 @@
+<html>
+<head>
+<title>MainActivity.kt</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #cc7832;}
+.s1 { color: #a9b7c6;}
+.s2 { color: #808080;}
+.s3 { color: #6a8759;}
+.s4 { color: #6897bb;}
+</style>
+</head>
+<body bgcolor="#2b2b2b">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+MainActivity.kt</font>
+</center></td></tr></table>
+<pre><span class="s0">package </span><span class="s1">com.example.calculator</span>
+
+<span class="s1">import android.os.Bundle</span>
+<span class="s1">import android.widget.Button</span>
+<span class="s1">import android.widget.TextView</span>
+<span class="s1">import android.widget.Toast</span>
+<span class="s1">import androidx.appcompat.app.AppCompatActivity</span>
+
+<span class="s0">class </span><span class="s1">MainActivity : AppCompatActivity() {</span>
+
+    <span class="s2">// creating variables for our text view and button</span>
+    <span class="s1">private lateinit </span><span class="s0">var </span><span class="s1">tvsec: TextView</span>
+    <span class="s1">lateinit </span><span class="s0">var </span><span class="s1">tvMain: TextView</span>
+    <span class="s1">lateinit </span><span class="s0">var </span><span class="s1">bac: Button</span>
+    <span class="s1">lateinit </span><span class="s0">var </span><span class="s1">bc: Button</span>
+    <span class="s1">lateinit </span><span class="s0">var </span><span class="s1">bbrac1: Button</span>
+    <span class="s1">lateinit </span><span class="s0">var </span><span class="s1">bbrac2: Button</span>
+    <span class="s1">lateinit </span><span class="s0">var </span><span class="s1">bsin: Button</span>
+    <span class="s1">lateinit </span><span class="s0">var </span><span class="s1">bcos: Button</span>
+    <span class="s1">lateinit </span><span class="s0">var </span><span class="s1">btan: Button</span>
+    <span class="s1">lateinit </span><span class="s0">var </span><span class="s1">blog: Button</span>
+    <span class="s1">lateinit </span><span class="s0">var </span><span class="s1">bln: Button</span>
+    <span class="s1">lateinit </span><span class="s0">var </span><span class="s1">bfact: Button</span>
+    <span class="s1">lateinit </span><span class="s0">var </span><span class="s1">bsquare: Button</span>
+    <span class="s1">lateinit </span><span class="s0">var </span><span class="s1">bsqrt: Button</span>
+    <span class="s1">lateinit </span><span class="s0">var </span><span class="s1">binv: Button</span>
+    <span class="s1">lateinit </span><span class="s0">var </span><span class="s1">b0: Button</span>
+    <span class="s1">lateinit </span><span class="s0">var </span><span class="s1">b9: Button</span>
+    <span class="s1">lateinit </span><span class="s0">var </span><span class="s1">b8: Button</span>
+    <span class="s1">lateinit </span><span class="s0">var </span><span class="s1">b7: Button</span>
+    <span class="s1">lateinit </span><span class="s0">var </span><span class="s1">b6: Button</span>
+    <span class="s1">lateinit </span><span class="s0">var </span><span class="s1">b5: Button</span>
+    <span class="s1">lateinit </span><span class="s0">var </span><span class="s1">b4: Button</span>
+    <span class="s1">lateinit </span><span class="s0">var </span><span class="s1">b3: Button</span>
+    <span class="s1">lateinit </span><span class="s0">var </span><span class="s1">b2: Button</span>
+    <span class="s1">lateinit </span><span class="s0">var </span><span class="s1">b1: Button</span>
+    <span class="s1">lateinit </span><span class="s0">var </span><span class="s1">bpi: Button</span>
+    <span class="s1">lateinit </span><span class="s0">var </span><span class="s1">bmul: Button</span>
+    <span class="s1">lateinit </span><span class="s0">var </span><span class="s1">bminus: Button</span>
+    <span class="s1">lateinit </span><span class="s0">var </span><span class="s1">bplus: Button</span>
+    <span class="s1">lateinit </span><span class="s0">var </span><span class="s1">bequal: Button</span>
+    <span class="s1">lateinit </span><span class="s0">var </span><span class="s1">bdot: Button</span>
+    <span class="s1">lateinit </span><span class="s0">var </span><span class="s1">bdiv: Button</span>
+
+    <span class="s1">override </span><span class="s0">fun </span><span class="s1">onCreate(savedInstanceState: Bundle?) {</span>
+        <span class="s0">super</span><span class="s1">.onCreate(savedInstanceState)</span>
+        <span class="s1">setContentView(R.layout.activity_main)</span>
+
+        <span class="s2">// initializing all our variables.</span>
+        <span class="s1">tvsec = findViewById(R.id.idTVSecondary)</span>
+        <span class="s1">tvMain = findViewById(R.id.idTVprimary)</span>
+        <span class="s1">bac = findViewById(R.id.bac)</span>
+        <span class="s1">bc = findViewById(R.id.bc)</span>
+        <span class="s1">bbrac1 = findViewById(R.id.bbrac1)</span>
+        <span class="s1">bbrac2 = findViewById(R.id.bbrac2)</span>
+        <span class="s1">bsin = findViewById(R.id.bsin)</span>
+        <span class="s1">bcos = findViewById(R.id.bcos)</span>
+        <span class="s1">btan = findViewById(R.id.btan)</span>
+        <span class="s1">blog = findViewById(R.id.blog)</span>
+        <span class="s1">bln = findViewById(R.id.bln)</span>
+        <span class="s1">bfact = findViewById(R.id.bfact)</span>
+        <span class="s1">bsquare = findViewById(R.id.bsquare)</span>
+        <span class="s1">bsqrt = findViewById(R.id.bsqrt)</span>
+        <span class="s1">binv = findViewById(R.id.binv)</span>
+        <span class="s1">b0 = findViewById(R.id.b0)</span>
+        <span class="s1">b9 = findViewById(R.id.b9)</span>
+        <span class="s1">b8 = findViewById(R.id.b8)</span>
+        <span class="s1">b7 = findViewById(R.id.b7)</span>
+        <span class="s1">b6 = findViewById(R.id.b6)</span>
+        <span class="s1">b5 = findViewById(R.id.b5)</span>
+        <span class="s1">b4 = findViewById(R.id.b4)</span>
+        <span class="s1">b3 = findViewById(R.id.b3)</span>
+        <span class="s1">b2 = findViewById(R.id.b2)</span>
+        <span class="s1">b1 = findViewById(R.id.b1)</span>
+        <span class="s1">bpi = findViewById(R.id.bpi)</span>
+        <span class="s1">bmul = findViewById(R.id.bmul)</span>
+        <span class="s1">bminus = findViewById(R.id.bminus)</span>
+        <span class="s1">bplus = findViewById(R.id.bplus)</span>
+        <span class="s1">bequal = findViewById(R.id.bequal)</span>
+        <span class="s1">bdot = findViewById(R.id.bdot)</span>
+        <span class="s1">bdiv = findViewById(R.id.bdiv)</span>
+
+        <span class="s2">// adding on click listener to our all buttons.</span>
+        <span class="s1">b1.setOnClickListener {</span>
+            <span class="s2">// on below line we are appending</span>
+            <span class="s2">// the expression to our text view.</span>
+            <span class="s1">tvMain.text = (tvMain.text.toString() + </span><span class="s3">&quot;1&quot;</span><span class="s1">)</span>
+        <span class="s1">}</span>
+        <span class="s1">b2.setOnClickListener {</span>
+            <span class="s2">// on below line we are appending</span>
+            <span class="s2">// the expression to our text view.</span>
+            <span class="s1">tvMain.text = (tvMain.text.toString() + </span><span class="s3">&quot;2&quot;</span><span class="s1">)</span>
+        <span class="s1">}</span>
+        <span class="s1">b3.setOnClickListener {</span>
+            <span class="s2">// on below line we are appending</span>
+            <span class="s2">// the expression to our text view.</span>
+            <span class="s1">tvMain.text = (tvMain.text.toString() + </span><span class="s3">&quot;3&quot;</span><span class="s1">)</span>
+        <span class="s1">}</span>
+        <span class="s1">b4.setOnClickListener {</span>
+            <span class="s1">tvMain.text = (tvMain.text.toString() + </span><span class="s3">&quot;4&quot;</span><span class="s1">)</span>
+        <span class="s1">}</span>
+        <span class="s1">b5.setOnClickListener {</span>
+            <span class="s1">tvMain.text = (tvMain.text.toString() + </span><span class="s3">&quot;5&quot;</span><span class="s1">)</span>
+        <span class="s1">}</span>
+        <span class="s1">b6.setOnClickListener {</span>
+            <span class="s1">tvMain.text = (tvMain.text.toString() + </span><span class="s3">&quot;6&quot;</span><span class="s1">)</span>
+        <span class="s1">}</span>
+        <span class="s1">b7.setOnClickListener {</span>
+            <span class="s1">tvMain.text = (tvMain.text.toString() + </span><span class="s3">&quot;7&quot;</span><span class="s1">)</span>
+        <span class="s1">}</span>
+        <span class="s1">b8.setOnClickListener {</span>
+            <span class="s1">tvMain.text = (tvMain.text.toString() + </span><span class="s3">&quot;8&quot;</span><span class="s1">)</span>
+        <span class="s1">}</span>
+        <span class="s1">b9.setOnClickListener {</span>
+            <span class="s1">tvMain.text = (tvMain.text.toString() + </span><span class="s3">&quot;9&quot;</span><span class="s1">)</span>
+        <span class="s1">}</span>
+        <span class="s1">b0.setOnClickListener {</span>
+            <span class="s1">tvMain.text = (tvMain.text.toString() + </span><span class="s3">&quot;0&quot;</span><span class="s1">)</span>
+        <span class="s1">}</span>
+        <span class="s1">bdot.setOnClickListener {</span>
+            <span class="s1">tvMain.text = (tvMain.text.toString() + </span><span class="s3">&quot;.&quot;</span><span class="s1">)</span>
+        <span class="s1">}</span>
+        <span class="s1">bplus.setOnClickListener {</span>
+            <span class="s1">tvMain.text = (tvMain.text.toString() + </span><span class="s3">&quot;+&quot;</span><span class="s1">)</span>
+        <span class="s1">}</span>
+        <span class="s1">bdiv.setOnClickListener {</span>
+            <span class="s1">tvMain.text = (tvMain.text.toString() + </span><span class="s3">&quot;/&quot;</span><span class="s1">)</span>
+        <span class="s1">}</span>
+        <span class="s1">bbrac1.setOnClickListener {</span>
+            <span class="s1">tvMain.text = (tvMain.text.toString() + </span><span class="s3">&quot;(&quot;</span><span class="s1">)</span>
+        <span class="s1">}</span>
+        <span class="s1">bbrac2.setOnClickListener {</span>
+            <span class="s1">tvMain.text = (tvMain.text.toString() + </span><span class="s3">&quot;)&quot;</span><span class="s1">)</span>
+        <span class="s1">}</span>
+        <span class="s1">bpi.setOnClickListener {</span>
+            <span class="s2">// on clicking on pi button we are adding</span>
+            <span class="s2">// pi value as 3.142 to our current value.</span>
+            <span class="s1">tvMain.text = (tvMain.text.toString() + </span><span class="s3">&quot;3.142&quot;</span><span class="s1">)</span>
+            <span class="s1">tvsec.text = (bpi.text.toString())</span>
+        <span class="s1">}</span>
+        <span class="s1">bsin.setOnClickListener {</span>
+            <span class="s1">tvMain.text = (tvMain.text.toString() + </span><span class="s3">&quot;sin&quot;</span><span class="s1">)</span>
+        <span class="s1">}</span>
+        <span class="s1">bcos.setOnClickListener {</span>
+            <span class="s1">tvMain.text = (tvMain.text.toString() + </span><span class="s3">&quot;cos&quot;</span><span class="s1">)</span>
+        <span class="s1">}</span>
+        <span class="s1">btan.setOnClickListener {</span>
+            <span class="s1">tvMain.text = (tvMain.text.toString() + </span><span class="s3">&quot;tan&quot;</span><span class="s1">)</span>
+        <span class="s1">}</span>
+        <span class="s1">binv.setOnClickListener {</span>
+            <span class="s1">tvMain.text = (tvMain.text.toString() + </span><span class="s3">&quot;^&quot; </span><span class="s1">+ </span><span class="s3">&quot;(-1)&quot;</span><span class="s1">)</span>
+        <span class="s1">}</span>
+        <span class="s1">bln.setOnClickListener {</span>
+            <span class="s1">tvMain.text = (tvMain.text.toString() + </span><span class="s3">&quot;ln&quot;</span><span class="s1">)</span>
+        <span class="s1">}</span>
+        <span class="s1">blog.setOnClickListener {</span>
+            <span class="s1">tvMain.text = (tvMain.text.toString() + </span><span class="s3">&quot;log&quot;</span><span class="s1">)</span>
+        <span class="s1">}</span>
+
+        <span class="s1">bminus.setOnClickListener {</span>
+            <span class="s2">// on clicking on minus we are checking if</span>
+            <span class="s2">// the user has already a minus operation on screen.</span>
+            <span class="s2">// if minus operation is already present</span>
+            <span class="s2">// then we will not do anything.</span>
+            <span class="s0">val </span><span class="s1">str: String = tvMain.text.toString()</span>
+            <span class="s0">if </span><span class="s1">(!str.get(index = str.length - </span><span class="s4">1</span><span class="s1">).equals(</span><span class="s3">&quot;-&quot;</span><span class="s1">)) {</span>
+                <span class="s1">tvMain.text = (tvMain.text.toString() + </span><span class="s3">&quot;-&quot;</span><span class="s1">)</span>
+            <span class="s1">}</span>
+        <span class="s1">}</span>
+        <span class="s1">bmul.setOnClickListener {</span>
+            <span class="s2">// if mul sign is not present in our</span>
+            <span class="s2">// text view then only we are adding</span>
+            <span class="s2">// the multiplication operator to it.</span>
+            <span class="s0">val </span><span class="s1">str: String = tvMain.text.toString()</span>
+            <span class="s0">if </span><span class="s1">(!str.get(index = str.length - </span><span class="s4">1</span><span class="s1">).equals(</span><span class="s3">&quot;*&quot;</span><span class="s1">)) {</span>
+                <span class="s1">tvMain.text = (tvMain.text.toString() + </span><span class="s3">&quot;*&quot;</span><span class="s1">)</span>
+            <span class="s1">}</span>
+        <span class="s1">}</span>
+        <span class="s1">bsqrt.setOnClickListener {</span>
+            <span class="s0">if </span><span class="s1">(tvMain.text.toString().isEmpty()) {</span>
+                <span class="s2">// if the entered number is empty we are displaying an error message.</span>
+                <span class="s1">Toast.makeText(</span><span class="s0">this, </span><span class="s3">&quot;Please enter a valid number..&quot;</span><span class="s0">, </span><span class="s1">Toast.LENGTH_SHORT).show()</span>
+            <span class="s1">} </span><span class="s0">else </span><span class="s1">{</span>
+                <span class="s0">val </span><span class="s1">str: String = tvMain.text.toString()</span>
+                <span class="s2">// on below line we are calculation</span>
+                <span class="s2">// square root of the given number.</span>
+                <span class="s0">val </span><span class="s1">r = Math.sqrt(str.toDouble())</span>
+                <span class="s2">// on below line we are converting our double</span>
+                <span class="s2">// to string and then setting it to text view.</span>
+                <span class="s0">val </span><span class="s1">result = r.toString()</span>
+                <span class="s1">tvMain.setText(result)</span>
+            <span class="s1">}</span>
+        <span class="s1">}</span>
+        <span class="s1">bequal.setOnClickListener {</span>
+            <span class="s0">val </span><span class="s1">str: String = tvMain.text.toString()</span>
+            <span class="s2">// on below line we are calling an evaluate</span>
+            <span class="s2">// method to calculate the value of expressions.</span>
+            <span class="s0">val </span><span class="s1">result: Double = evaluate(str)</span>
+            <span class="s2">// on below line we are getting result</span>
+            <span class="s2">// and setting it to text view.</span>
+            <span class="s0">val </span><span class="s1">r = result.toString()</span>
+            <span class="s1">tvMain.setText(r)</span>
+            <span class="s1">tvsec.text = str</span>
+        <span class="s1">}</span>
+        <span class="s1">bac.setOnClickListener {</span>
+            <span class="s2">// on clicking on ac button we are clearing</span>
+            <span class="s2">// our primary and secondary text view.</span>
+            <span class="s1">tvMain.setText(</span><span class="s3">&quot;&quot;</span><span class="s1">)</span>
+            <span class="s1">tvsec.setText(</span><span class="s3">&quot;&quot;</span><span class="s1">)</span>
+        <span class="s1">}</span>
+        <span class="s1">bc.setOnClickListener {</span>
+            <span class="s2">// on clicking on c button we are clearing</span>
+            <span class="s2">// the last character by checking the length.</span>
+            <span class="s0">var </span><span class="s1">str: String = tvMain.text.toString()</span>
+            <span class="s0">if </span><span class="s1">(!str.equals(</span><span class="s3">&quot;&quot;</span><span class="s1">)) {</span>
+                <span class="s1">str = str.substring(</span><span class="s4">0</span><span class="s0">, </span><span class="s1">str.length - </span><span class="s4">1</span><span class="s1">)</span>
+                <span class="s1">tvMain.text = str</span>
+            <span class="s1">}</span>
+        <span class="s1">}</span>
+        <span class="s1">bsquare.setOnClickListener {</span>
+            <span class="s0">if </span><span class="s1">(tvMain.text.toString().isEmpty()) {</span>
+                <span class="s2">// if the entered number is empty we are displaying an error message.</span>
+                <span class="s1">Toast.makeText(</span><span class="s0">this, </span><span class="s3">&quot;Please enter a valid number..&quot;</span><span class="s0">, </span><span class="s1">Toast.LENGTH_SHORT).show()</span>
+            <span class="s1">} </span><span class="s0">else </span><span class="s1">{</span>
+                <span class="s2">// on below line we are getting the expression and then calculating the square of the number</span>
+                <span class="s0">val </span><span class="s1">d: Double = tvMain.getText().toString().toDouble()</span>
+                <span class="s2">// on below line we are calculating the square.</span>
+                <span class="s0">val </span><span class="s1">square = d * d</span>
+                <span class="s2">// after calculating the square we</span>
+                <span class="s2">// are setting it to text view.</span>
+                <span class="s1">tvMain.setText(square.toString())</span>
+                <span class="s2">// on below line we are setting</span>
+                <span class="s2">// the d to secondary text view.</span>
+                <span class="s1">tvsec.text = </span><span class="s3">&quot;</span><span class="s0">$</span><span class="s1">d</span><span class="s3">²&quot;</span>
+            <span class="s1">}</span>
+        <span class="s1">}</span>
+        <span class="s1">bfact.setOnClickListener {</span>
+            <span class="s0">if </span><span class="s1">(tvMain.text.toString().isEmpty()) {</span>
+                <span class="s2">// if the entered number is empty we are displaying an error message.</span>
+                <span class="s1">Toast.makeText(</span><span class="s0">this, </span><span class="s3">&quot;Please enter a valid number..&quot;</span><span class="s0">, </span><span class="s1">Toast.LENGTH_SHORT).show()</span>
+            <span class="s1">} </span><span class="s0">else </span><span class="s1">{</span>
+                <span class="s2">// on below line we are getting int value</span>
+                <span class="s2">// and calculating the factorial value of the entered number.</span>
+                <span class="s0">val </span><span class="s1">value: Int = tvMain.text.toString().toInt()</span>
+                <span class="s0">val </span><span class="s1">fact: Int = factorial(value)</span>
+                <span class="s1">tvMain.setText(fact.toString())</span>
+                <span class="s1">tvsec.text = </span><span class="s3">&quot;</span><span class="s0">$</span><span class="s1">value</span><span class="s3">`!&quot;</span>
+            <span class="s1">}</span>
+
+        <span class="s1">}</span>
+
+    <span class="s1">}</span>
+
+    <span class="s0">fun </span><span class="s1">factorial(n: Int): Int {</span>
+        <span class="s2">// this method is use to find factorial</span>
+        <span class="s0">return if </span><span class="s1">(n == </span><span class="s4">1 </span><span class="s1">|| n == </span><span class="s4">0</span><span class="s1">) </span><span class="s4">1 </span><span class="s0">else </span><span class="s1">n * factorial(n - </span><span class="s4">1</span><span class="s1">)</span>
+    <span class="s1">}</span>
+
+    <span class="s0">fun </span><span class="s1">evaluate(str: String): Double {</span>
+        <span class="s0">return object </span><span class="s1">: Any() {</span>
+            <span class="s2">// on below line we are creating variable</span>
+            <span class="s2">// for tracking the position and char pos.</span>
+            <span class="s0">var </span><span class="s1">pos = -</span><span class="s4">1</span>
+            <span class="s0">var </span><span class="s1">ch = </span><span class="s4">0</span>
+
+            <span class="s2">// below method is for moving to next character.</span>
+            <span class="s0">fun </span><span class="s1">nextChar() {</span>
+                <span class="s2">// on below line we are incrementing our position</span>
+                <span class="s2">// and moving it to next position.</span>
+                <span class="s1">ch = </span><span class="s0">if </span><span class="s1">(++pos &lt; str.length) str[pos].toInt() </span><span class="s0">else </span><span class="s1">-</span><span class="s4">1</span>
+            <span class="s1">}</span>
+
+            <span class="s2">// this method is use to check the extra space</span>
+            <span class="s2">// present int the expression and removing it.</span>
+            <span class="s0">fun </span><span class="s1">eat(charToEat: Int): Boolean {</span>
+                <span class="s0">while </span><span class="s1">(ch == </span><span class="s3">' '</span><span class="s1">.toInt()) nextChar()</span>
+                <span class="s2">// on below line we are checking the char pos</span>
+                <span class="s2">// if both is equal then we are returning it to true.</span>
+                <span class="s0">if </span><span class="s1">(ch == charToEat) {</span>
+                    <span class="s1">nextChar()</span>
+                    <span class="s0">return true</span>
+                <span class="s1">}</span>
+                <span class="s0">return false</span>
+            <span class="s1">}</span>
+
+            <span class="s2">// below method is to parse our</span>
+            <span class="s2">// expression and to get the ans</span>
+            <span class="s2">// in this we are calling a parse</span>
+            <span class="s2">// expression method to calculate the value.</span>
+            <span class="s0">fun </span><span class="s1">parse(): Double {</span>
+                <span class="s1">nextChar()</span>
+                <span class="s0">val </span><span class="s1">x = parseExpression()</span>
+                <span class="s0">if </span><span class="s1">(pos &lt; str.length) </span><span class="s0">throw </span><span class="s1">RuntimeException(</span><span class="s3">&quot;Unexpected: &quot; </span><span class="s1">+ ch.toChar())</span>
+                <span class="s0">return </span><span class="s1">x</span>
+            <span class="s1">}</span>
+
+            <span class="s2">// in this method we will only perform addition and</span>
+            <span class="s2">// subtraction operation on the expression.</span>
+            <span class="s0">fun </span><span class="s1">parseExpression(): Double {</span>
+                <span class="s0">var </span><span class="s1">x = parseTerm()</span>
+                <span class="s0">while </span><span class="s1">(</span><span class="s0">true</span><span class="s1">) {</span>
+                    <span class="s0">if </span><span class="s1">(eat(</span><span class="s3">'+'</span><span class="s1">.toInt())) x += parseTerm() </span><span class="s2">// addition</span>
+                    <span class="s0">else if </span><span class="s1">(eat(</span><span class="s3">'-'</span><span class="s1">.toInt())) x -= parseTerm() </span><span class="s2">// subtraction</span>
+                    <span class="s0">else return </span><span class="s1">x</span>
+                <span class="s1">}</span>
+            <span class="s1">}</span>
+
+            <span class="s2">// in below method we will perform</span>
+            <span class="s2">// only multiplication and division operation.</span>
+            <span class="s0">fun </span><span class="s1">parseTerm(): Double {</span>
+                <span class="s0">var </span><span class="s1">x = parseFactor()</span>
+                <span class="s0">while </span><span class="s1">(</span><span class="s0">true</span><span class="s1">) {</span>
+                    <span class="s0">if </span><span class="s1">(eat(</span><span class="s3">'*'</span><span class="s1">.toInt())) x *= parseFactor() </span><span class="s2">// multiplication</span>
+                    <span class="s0">else if </span><span class="s1">(eat(</span><span class="s3">'/'</span><span class="s1">.toInt())) x /= parseFactor() </span><span class="s2">// division</span>
+                    <span class="s0">else return </span><span class="s1">x</span>
+                <span class="s1">}</span>
+            <span class="s1">}</span>
+
+            <span class="s2">// below method is use to parse the factor</span>
+            <span class="s0">fun </span><span class="s1">parseFactor(): Double {</span>
+                <span class="s2">//on below line we are checking for addition</span>
+                <span class="s2">// and subtraction and performing unary operations.</span>
+                <span class="s0">if </span><span class="s1">(eat(</span><span class="s3">'+'</span><span class="s1">.toInt())) </span><span class="s0">return </span><span class="s1">parseFactor() </span><span class="s2">// unary plus</span>
+                <span class="s0">if </span><span class="s1">(eat(</span><span class="s3">'-'</span><span class="s1">.toInt())) </span><span class="s0">return </span><span class="s1">-parseFactor() </span><span class="s2">// unary minus</span>
+                <span class="s2">// creating a double variable for ans.</span>
+                <span class="s0">var </span><span class="s1">x: Double</span>
+                <span class="s2">// on below line we are creating</span>
+                <span class="s2">// a variable for position.</span>
+                <span class="s0">val </span><span class="s1">startPos = pos</span>
+                <span class="s2">// on below line we are checking</span>
+                <span class="s2">// for opening and closing parenthesis.</span>
+                <span class="s0">if </span><span class="s1">(eat(</span><span class="s3">'('</span><span class="s1">.toInt())) { </span><span class="s2">// parentheses</span>
+                    <span class="s1">x = parseExpression()</span>
+                    <span class="s1">eat(</span><span class="s3">')'</span><span class="s1">.toInt())</span>
+                <span class="s1">} </span><span class="s0">else if </span><span class="s1">(ch &gt;= </span><span class="s3">'0'</span><span class="s1">.toInt() &amp;&amp; ch &lt;= </span><span class="s3">'9'</span><span class="s1">.toInt() || ch == </span><span class="s3">'.'</span><span class="s1">.toInt()) {</span>
+                    <span class="s2">// numbers</span>
+                    <span class="s0">while </span><span class="s1">(ch &gt;= </span><span class="s3">'0'</span><span class="s1">.toInt() &amp;&amp; ch &lt;= </span><span class="s3">'9'</span><span class="s1">.toInt() || ch == </span><span class="s3">'.'</span><span class="s1">.toInt()) nextChar()</span>
+                    <span class="s2">// on below line we are getting sub string from our string using start and pos.</span>
+                    <span class="s1">x = str.substring(startPos</span><span class="s0">, </span><span class="s1">pos).toDouble()</span>
+                <span class="s1">} </span><span class="s0">else if </span><span class="s1">(ch &gt;= </span><span class="s3">'a'</span><span class="s1">.toInt() &amp;&amp; ch &lt;= </span><span class="s3">'z'</span><span class="s1">.toInt()) {</span>
+                    <span class="s2">// on below function we are checking for the operator in our expression.</span>
+                    <span class="s0">while </span><span class="s1">(ch &gt;= </span><span class="s3">'a'</span><span class="s1">.toInt() &amp;&amp; ch &lt;= </span><span class="s3">'z'</span><span class="s1">.toInt()) nextChar()</span>
+                    <span class="s0">val </span><span class="s1">func = str.substring(startPos</span><span class="s0">, </span><span class="s1">pos)</span>
+                    <span class="s2">// calling a method to parse our factor.</span>
+                    <span class="s1">x = parseFactor()</span>
+                    <span class="s2">// on below line we are checking for square root.</span>
+                    <span class="s1">x =</span>
+                        <span class="s0">if </span><span class="s1">(func == </span><span class="s3">&quot;sqrt&quot;</span><span class="s1">) Math.sqrt(x)</span>
+                        <span class="s2">// on below line we are checking for sin function</span>
+                        <span class="s2">// and calculating sin function using Math class.</span>
+                        <span class="s0">else if </span><span class="s1">(func == </span><span class="s3">&quot;sin&quot;</span><span class="s1">) Math.sin(</span>
+                            <span class="s1">Math.toRadians(x)</span>
+
+                            <span class="s2">// on below line we are calculating the cos value</span>
+                        <span class="s1">)</span>
+                        <span class="s0">else if </span><span class="s1">(func == </span><span class="s3">&quot;cos&quot;</span><span class="s1">) Math.cos(</span>
+                            <span class="s1">Math.toRadians(x)</span>
+                            <span class="s2">// on below line we are calculating</span>
+                            <span class="s2">// the tan value of our expression.</span>
+                        <span class="s1">) </span><span class="s0">else if </span><span class="s1">(func == </span><span class="s3">&quot;tan&quot;</span><span class="s1">)</span>
+                            <span class="s1">Math.tan(Math.toRadians(x))</span>
+                        <span class="s2">// on below line we are calculating</span>
+                        <span class="s2">// log value of the expression.</span>
+                        <span class="s0">else if </span><span class="s1">(func == </span><span class="s3">&quot;log&quot;</span><span class="s1">)</span>
+                            <span class="s1">Math.log10(x)</span>
+                        <span class="s2">// on below line we are calculating</span>
+                        <span class="s2">// ln value of expression.</span>
+                        <span class="s0">else if </span><span class="s1">(func == </span><span class="s3">&quot;ln&quot;</span><span class="s1">)</span>
+
+                            <span class="s1">Math.log(x)</span>
+
+                        <span class="s2">// f we get any error then</span>
+                        <span class="s2">// we simply return the exception.</span>
+                        <span class="s0">else throw </span><span class="s1">RuntimeException(</span>
+                            <span class="s3">&quot;Unknown function: </span><span class="s0">$</span><span class="s1">func</span><span class="s3">&quot;</span>
+                        <span class="s1">)</span>
+                <span class="s1">} </span><span class="s0">else </span><span class="s1">{</span>
+                    <span class="s2">// if the condition not satisfy then we are returning the exception</span>
+                    <span class="s0">throw </span><span class="s1">RuntimeException(</span><span class="s3">&quot;Unexpected: &quot; </span><span class="s1">+ ch.toChar())</span>
+                <span class="s1">}</span>
+                <span class="s2">// on below line we are calculating the power of the expression.</span>
+                <span class="s0">if </span><span class="s1">(eat(</span><span class="s3">'^'</span><span class="s1">.toInt())) x = Math.pow(x</span><span class="s0">, </span><span class="s1">parseFactor()) </span><span class="s2">// exponentiation</span>
+                <span class="s0">return </span><span class="s1">x</span>
+            <span class="s1">}</span>
+            <span class="s2">// at last calling a parse for our expression.</span>
+        <span class="s1">}.parse()</span>
+    <span class="s1">}</span>
+<span class="s1">}</span></pre>
+</body>
+</html>
